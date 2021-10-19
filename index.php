@@ -152,7 +152,7 @@
             </div>
         </div>
 
-        <!-- Product Edit -->
+        <!-- Edit Product -->
         <script>
 
             $(document).ready(function() {
@@ -255,12 +255,11 @@
                                 id: idProducto
                             },
                             success: function(dataResult){
-                                var dataResult = JSON.parse(dataResult);
-                                if(dataResult.statusCode==200){
-                                    alert("El producto fue eliminado con éxito");
-                                    window.location.reload();						
+                                
+                                alert("El producto fue eliminado con éxito");
+                                window.location.reload();						
 
-                                }
+                                
                             }
                         });
                     }

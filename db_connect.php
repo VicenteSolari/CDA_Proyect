@@ -5,9 +5,10 @@
     $password = "test1234";
     $db="cda_proyect"; 
 
-    $conn = mysqli_connect($servername, $username, $password, $db);
 
-    if(!$conn){
-        echo 'Connection error: ' . mysqli_connect_error();
+    try{
+        $conn = new PDO('mysql:host=localhost;dbname=cda_proyect', $username, $password);
+    }catch(Exception $e){ 
+        echo"Error en la conexión" .$e->getMessage();
     }
 ?>
